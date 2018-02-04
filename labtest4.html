@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="this is my lab test 4 for comp1231">
+		<meta name= "Keywords" content="labtest4.html,OsmanOsman">
+		<meta name= "author" content='osman.osman@georgebrown.ca'>
+		<title>LabTest 4</title>
+	</head>
+	<body>
+		<h5><a href="http://w5962928.gblearn.com/comp1231/Labs/lab4/prelab4.html">Prelab4</a></h5>
+		<h2>Super Heroes</h2>
+		<p>Osman Osman ID:100962928</p>
+		<script>
+			var track = prompt ("what is the length of the track?");
+			track = parseInt(track);
+			var heroes = []
+			for (var i=0; i < 4, i++) {
+				var hero = []
+				var v = Math.floor(100 + 100 * Math.random());
+				var time = track / v;
+				hero["time"] = time;
+				switch(i) {
+					case 0:
+					hero["name"] = "super man";
+					break;
+					case 1:
+					hero["name"] = "spider man";
+					break;
+					case 2:
+					hero["name"] = "iron man";
+					break;
+					case 3:
+					hero["name"] = "captain america";
+					break;	
+			heroes.push(hero);
+			}
+				}
+			myTable = "<table><tr><th>Hero</th><th>Time</th></tr>";
+			for(var i in heroes) {
+				var hero = heroes[i];
+			myTable += "<tr><td>"+hero["name"]+"</td><td style=\"text-align:right\">"+hero["time"]+"</td></tr>";
+			}
+			myTable += "</table>";
+			document.write(myTable);
+			
+			var lasttime = Math.min(heroes["time"]);
+			var lasthero = heroes["name"];
+			
+			for(var i=1; i, heroes.lenght; i++) {
+				var last = heroes[i];
+				if(hero["time"] < lasttime) {
+					lasttime = hero["time"];
+					lasthero = hero["name"];
+				}
+			}
+			document.write("<h3>Last:"+lasttime+",  Hero:"+lasthero+"</h3>");
+		</script>
+	</body>
+<br>
+<script > //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01/HTML5_Logo_2561.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="this is my lab test 3 for comp1231">
+		<meta name= "Keywords" content="labtest3.html,OsmanOsman">
+		<meta name= "author" content='osman.osman@georgebrown.ca'>
+		<title>Pre-Lab 3</title>
+	</head>
+	<body>
+		<h5><a href="http://w5962928.gblearn.com/comp1231/Labs/lab3/prelab3.html">Prelab3</a></h5>
+		<h2>Primes less than twenty</h2>
+		<p>Osman Osman ID:100962928</p>
+		<script>
+			/*
+			var weekDays = ["<li>Monday","<li>Tuesday","<li>Thursday","<li>Friday","<li>Saturday","<li>Sunday"];
+			for (i=0;i<weekDays.length;i++)
+			{
+				document.write(weekDays[i]);
+			}
+			*/
+			var weekDays = ["Monday","Tuesday","Wednesday",
+			"Thursday","Friday","Saturday","Sunday"];
+			document.write("<ul>");
+			//for(var v in myPrimes) {
+			//   document.write("<li>"+myPrimes[v]+"</li>");
+			//}
+			for(var v=0; v<weekDays.length; v++) {
+			    document.write("<li>"+weekDays[v]+"</li>");
+			}
+			document.write("</ul>");
+
+		
+		</script>
+</body>
+<br>
+<script > //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01/HTML5_Logo_2561.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</html>

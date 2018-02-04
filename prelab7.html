@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta name="description" content="this is my pre lab 6 for comp1231">
+		<meta name= "Keywords" content="prelab6.html,OsmanOsman">
+		<meta name= "author" content='osman.osman@georgebrown.ca'>
+		<title>Pre-Lab 6</title>
+		
+	</head>
+	<body>
+		<h1>Objects</h1>
+		<p><u><b>Osman Osman ID: 100962928</b></u></p>
+		<script>
+			function calculate() {
+				var small = document.getElementById("small").value;
+				if ((small == "") || isNaN(small))
+				{ small = 0; }
+				else small = parseInt(small);
+	
+				var medium = document.getElementById("medium").value;
+				if ((medium == "") || isNaN(medium))
+				{ medium = 0; }
+				else medium = parseInt(medium);
+	
+				var large = document.getElementById("large").value;
+				if ((large == "") || isNaN(large))
+				{ large = 0; }
+				else large = parseInt(large);
+	
+				var total = small * 8.99 + large * 10.99 + medium * 12.99;
+	
+				var tip = document.getElementsByName("tip");
+				var ten = tip[0].checked;
+				var fifteen = tip[1].checked;
+				var twenty = tip[2].checked;
+				if (ten) total *= 1.1;
+				if (fifteen) total *= 1.15;
+				if (twenty) total *= 1.2;
+	
+				total = total.toFixed(2);
+   
+				document.getElementById("total").innerText = "Your order total is $"+total;
+			}
+		</script>
+		
+		<fieldset>
+			Small Pizza ($8.99) <input type="text" id="small" /> <br />
+			Medium Pizza ($10.99) <input type="text" id="medium" /><br />
+			Large Pizza ($12.99) <input type="text" id="large" /><br />
+
+			Tip:
+			<label><input type="radio" id="ten" name="tip" />10%</label>
+			<label><input type="radio" id="fifteen" name="tip" />15%</label>
+			<label><input type="radio" id="twenty" name="tip" />20%</label>
+			<br />
+
+			<button id="submit" onclick="calculate();">Calculate order</button>
+        </fieldset>
+		<br>
+		
+	</body>
+<br>
+<script > //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01/HTML5_Logo_2561.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="this is my pre lab 5 for comp1231">
+		<meta name= "Keywords" content="prelab5.html,OsmanOsman">
+		<meta name= "author" content='osman.osman@georgebrown.ca'>
+		<title>Pre-Lab 5</title>
+	</head>
+	<body>
+		<h5><a href="http://w5962928.gblearn.com/comp1231/Labs/lab4/prelab4.html">Prelab4</a></h5>
+		<h1>String Mix-Up</h1>
+		<p><u>Osman Osman ID: 100962928</u></p>
+		<script>
+			
+			function mixup(x) {
+				result = "";
+				var splitx = x.split("");
+				for(var i = splitx.length; i > 0; i--) {
+					var ix = Math.floor(i * Math.random());
+						result += splitx[ix];
+						splitx.splice(ix,1);
+				}
+				return result;
+			}
+			var word = prompt("Enter a word to be permuted");
+			document.write("the permuted word is: ", mixup(word));
+
+		</script>
+		<br>
+	</body>
+<br>
+<script > //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01/HTML5_Logo_2561.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</html>

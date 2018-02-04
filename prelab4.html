@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="description" content="this is my pre lab 3 for comp1231">
+		<meta name= "Keywords" content="Pre Lab 3.html,OsmanOsman">
+		<meta name= "author" content='osman.osman@georgebrown.ca'>
+		<title>Pre Lab 4</title>
+
+	</head>
+	
+	<body>
+		<script>
+			var wire = prompt ("what is the lengh of the wire");
+			wire = parseInt(wire);
+			var bugs = [] ;
+			for (var i=0; i< 6; i++) {
+				var bug =[] ;
+				bug["xcoord"] = Math.floor(wire*Math.random());
+				var chance = Math.random();
+				if(chance <=0.3)
+					bug["type"] = "spider";
+				else
+					bug["type"] = "roach";
+			bugs.push(bug);
+			}
+			myTable = "<table><tr><th>Bug</th><th>Distance</th></tr>";
+			for(var i in bugs) {
+				var bug = bugs[i];
+			myTable += "<tr><td>"+bug["type"]+"</td><td style=\"text-align:right\">"+bug["xcoord"]+"</td></tr>";
+			}
+			myTable += "</table>";
+			document.write(myTable);
+			
+			var minDistance = bugs[0]["xcoord.MIN_VALUE"];
+			var minBug = bugs[0]["type"];
+			
+			for(var i=1; i, bugs.lenght; i++) {
+				var currentBug = bugs[i];
+				if(currentBug["xcoord"] < minDistance) {
+					minDistance = currentBug["xcoord"];
+					minBug = currentBug["type"];
+				}
+			}
+			
+		document.write("<h3>Min Distance:"+minDistance+",  type;"+minBug+"</h3>");
+			
+		</script>
+	
+	<br>
+	<br>
+	<script > //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01/HTML5_Logo_2561.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+	</body>
+</html>
